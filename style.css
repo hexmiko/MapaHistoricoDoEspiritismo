@@ -55,12 +55,13 @@ div#imagem{
     display: table-cell;
     float: left;
     margin-right: 20px;
+    width: 550px;
     
 }
 
 div#imagem > p{
     text-align: center;
-    font-size: 22px
+    font-size: 20px
 }
 
 div#cadastro{
