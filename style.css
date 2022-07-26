@@ -6,6 +6,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     max-width: 1320px;
     width: 100%;
+    margin: auto;
 }
 
 header{
@@ -14,9 +15,10 @@ header{
     justify-content: space-around;
     border: 3px solid black;
     height: 8%;
-    padding-left: 10px;
-    padding-right: 10px;
+    
     width: 100%;
+    min-width: 390px;
+    max-width: 1320px;
 }
 
 header > h1{
@@ -36,9 +38,10 @@ ul{
 article{
     display: inline-block;
     margin: auto;
-    padding: 1%;
+    width: 98%;
+    padding-top: 1%;
+    min-width: 400px;
     
-
 }
 
 
@@ -57,42 +60,54 @@ div#principal{
 div#Logo {
     display: inline-block;
     justify-content: space-around;
+    text-align: -webkit-center;
     width: 100%;
     height: auto;
     background-color: rgb(47, 170, 94);
     border-bottom: 3px solid black;
 }
 
+a {
+    color: rgb(105, 189, 105);
+}
 
 div#Logo > img{
-    width: 35%;
+    width: 31%;
     height: 100px;
+    min-width: 270px;
+    padding-left: 7%;
 }
 
 div#Logo > p{
     font-size: 2em;
     text-align: center;
-    width: 60%;
-    min-width: 512px;
+    width: auto;
+    min-width: 320px;
     display: inline-block;
     vertical-align: center;
     position: relative;
-    top: -20px;
+    top: -25px;
     margin: auto;    
+    height: auto;
 }
 
 div#corpo{
     display: inline-block;
     height: 370px;
-    min-width: 400px;
+    min-width: 100%;
+    max-width: 100%;
     width: auto;
 }
 
 div#imagem{
     display: table-cell;
+    position: relative;
+    top: -2%;
     float: left;
     margin-right: 20px;
-    width: 45%;
+    width: 42%;
+    min-width: 320px;
+    padding-left: 2%;
 
     
 }
@@ -105,8 +120,9 @@ div#imagem > p{
 div#cadastro{
     display: inline-block;
     width: 50%;
-    min-width: 400px;
     padding-right: 20px;
+    padding-left: 10px;
+    min-width: 380px;
     /*border: 3px solid aqua;*/
     
 }
@@ -114,6 +130,7 @@ div#cadastro{
 div#cadastro > p {
     font-size: 20px;
     text-align: justify;
+    /*text-indent: 30px;*/
 }
 
 div#cadastro > h4 {
@@ -124,6 +141,7 @@ label#Email {
     font-size: 20px;
     text-align: center;
     vertical-align: middle;
+    /*text-indent: 30px;*/
     
 }
 
@@ -190,7 +208,7 @@ input#texto {
 }
 
 div#Redes{
-    background-color: rgb(143, 140, 140); 
+    background-color: rgb(15, 146, 133); 
     height: 40px;
     display: flex;
     
