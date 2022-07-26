@@ -5,7 +5,7 @@ body{
     background-color: rgb(35, 55, 141);
     font-family: Arial, Helvetica, sans-serif;
     max-width: 1320px;
-    width: 100%;
+    width: 90%;
     margin: auto;
 }
 
@@ -22,16 +22,9 @@ header{
 }
 
 header > h1{
-    text-align: left;
+    text-align: center;
+    
 }
-
-ul{
-    display: inline-block;
-    list-style-type: none;
-    align-items: lef;
-    margin: auto;
-}
-
 
 
 
@@ -107,7 +100,7 @@ div#imagem{
     margin-right: 20px;
     width: 42%;
     min-width: 320px;
-    padding-left: 2%;
+    padding-left: 3%;
 
     
 }
@@ -128,27 +121,29 @@ div#cadastro{
 }
 
 div#cadastro > p {
-    font-size: 20px;
+    font-size: 1.2em;
     text-align: justify;
     /*text-indent: 30px;*/
 }
 
 div#cadastro > h4 {
     text-align: left;
+
+}
+
+#cadastro > ul{
+    font-size: 14px;
 }
 
 label#Email {
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     vertical-align: middle;
     /*text-indent: 30px;*/
     
 }
 
-#cadastro ul{
-    position: relative;
-    top: 2px;
-}
+
 
 div#oquee{
     width: 640px;
@@ -209,7 +204,26 @@ input#texto {
 
 div#Redes{
     background-color: rgb(15, 146, 133); 
-    height: 40px;
+    height: 100px;
     display: flex;
+    padding: 0%;
     
+}
+#Redes > h3 {
+    padding-left: 10px;
+    text-align: left;
+    font-size: 18px;
+}
+#Redes > ul {
+    display: inline-block;
+    list-style-type: none;
+    align-items: left;
+    font-size: 18px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#Redes a {
+    color: rgb(54, 7, 141);
 }
