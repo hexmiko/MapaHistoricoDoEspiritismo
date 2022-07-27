@@ -65,10 +65,10 @@ a {
 }
 
 div#Logo > img{
-    width: 31%;
+    width: 25%;
     height: 100px;
     min-width: 270px;
-    padding-left: 7%;
+    
 }
 
 div#Logo > p{
