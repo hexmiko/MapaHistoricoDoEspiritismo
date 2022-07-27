@@ -132,7 +132,8 @@ div#cadastro > h4 {
 }
 
 #cadastro > ul{
-    font-size: 14px;
+    font-size: 18px;
+    list-style-type: none;
 }
 
 label#Email {
