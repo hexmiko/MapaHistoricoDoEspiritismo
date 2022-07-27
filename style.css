@@ -17,7 +17,7 @@ header{
     height: 8%;
     
     width: 100%;
-    min-width: 390px;
+    min-width: 400px;
     max-width: 1320px;
 }
 
@@ -99,7 +99,7 @@ div#imagem{
     float: left;
     margin-right: 20px;
     width: 42%;
-    min-width: 320px;
+    min-width: 376px;
     padding-left: 3%;
 
     
