@@ -181,12 +181,14 @@ div#video {
 
 
 form {
-    height: 45px;
+    height: 65px;
 }
 
 input#texto {
     padding: 9px;
-    font-size: inherit;
+    padding-right: inherit;
+    padding-left: 3px;
+    font-size: 14px;
     border-radius: 5%;
     
 }
