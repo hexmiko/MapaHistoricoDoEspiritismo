@@ -184,7 +184,7 @@ form {
     height: 70px;
 }
 
-input#texto {
+input#emailInput {
     padding: 9px;
     padding-right: inherit;
     padding-left: 3px;

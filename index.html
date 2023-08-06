@@ -1,40 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapa Histórico do Espiritismo em Fortaleza</title>
     <link rel="stylesheet" href="style.css">
-    
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init('CljscYqJznKCwRWQR');
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // generate a five digit number for the contact_number variable
-                this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
-                emailjs.sendForm('gmailMessage', 'template_sta9b2k', this)
-                    .then(function() {
-                        console.log('SUCCESS!');
-                        alert('Email enviado com sucesso!');
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                        alert('Failed..', error);
-                    });
-            });
-        }
-    </script>
-
-
 </head>
 
 
@@ -47,24 +19,24 @@
     </header>
 
     <div class="conteudo">
-        
-        
+
+
 
 
         <article>
             <div id="principal">
-                
+
                 <div id="Logo">
-                    <img src="Image/LogoGrupoMiranda.png"  alt="Logo">
+                    <img src="Image/LogoGrupoMiranda.png" alt="Logo">
                     <p><strong><i> Um Projeto do Grupo de Estudos Hermínio C. de Miranda </i></strong></p>
-                    
+
                 </div>
 
                 <div id="corpo">
                     <div id="imagem">
                         <div id="oquee">
                             <h1>O que é o mapa histórico?</h1>
-            
+
                             <div id="video">
                                 <video controls>
                                     <source src="video/EduVideo.m4v" type="video/m4v">
@@ -73,34 +45,35 @@
                                     <p>Seu navegador não tem compatibilidade com reprodução de vídeos</p>
                                 </video>
                             </div>
-            
+
                         </div>
 
 
-                        
-                    </div>
-                    
 
-                    
+                    </div>
+
+
+
 
                     <div id="cadastro">
                         <!-- #Colocar o ul lu para listar as intruções-->
 
-                        <p>1. Inscreva-se no Canal <a href="https://www.youtube.com/c/GrupodeEstudosHermínioCdeMiranda" 
-                            target="_blank">Grupo de Estudos Hermínio C. de Miranda</a></p>
-                        <p>2. Após sua inscrição, preencha com o seu email aqui para receber o 
-                            <strong>Mapa Histórico do Espiritismo</strong> gratuitamente.</p>
-                        
+                        <p>1. Inscreva-se no Canal <a href="https://www.youtube.com/c/GrupodeEstudosHermínioCdeMiranda" target="_blank">Grupo de Estudos
+                                Hermínio C. de Miranda</a></p>
+                        <p>2. Após sua inscrição, preencha com o seu email aqui para receber o
+                            <strong>Mapa Histórico do Espiritismo</strong> gratuitamente.
+                        </p>
+
                         <form id="contact-form">
                             <input type="hidden" name="contact_number">
-                            <label id="Email">3. Email:  </label>
-                            <input id="texto" placeholder="Ex: SeuEmail@gmail.com" type="email" name="user_email">
-                            
-                            <input id="botao"style=" display: inline-block;
-                            " type="submit" value="Enviar" >
+                            <label id="Email">3. Email: </label>
+                            <input id="emailInput" placeholder="Ex: SeuEmail@gmail.com" type="email" name="user_email" required>
+
+                            <input id="botao" style=" display: inline-block;
+                            " type="submit" onclick="sendMap()" value="Enviar">
                         </form>
-                        
-                        
+
+
                         <ul>
                             <li> <i> É possivel que o E-mail acabe sendo enviado para sua lixeira ou sua caixa de Spam, por favor, confira.</i></li>
                             <h4><strong>Sugestão de tamanho para impressão do mapa: Folha A3</strong></h4>
@@ -109,25 +82,90 @@
 
                     </div>
                 </div>
-                
-                
-                
+
+
+
             </div>
-            
-            <div id="Redes" >
+
+            <div id="Redes">
                 <h3 style="display: inline;">Siga nossas redes sociais para conhecer e acompanhar nossos outros projetos:</h1>
-                <ul>
-                    <li>
-                        <a ;" href="https://www.instagram.com/grupodeestudosherminio/"><img src="Image/Instagram-Icon.png" />Instagram</a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/GEHerminioCMiranda/"><img src="Image/Facebook-icon.png" />Facebook</a>
-                    </li>
-                </ul>
+                    <ul>
+                        <li>
+                            <a ;" href="https://www.instagram.com/grupodeestudosherminio/"><img src="Image/Instagram-Icon.png" />Instagram</a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/GEHerminioCMiranda/"><img src="Image/Facebook-icon.png" />Facebook</a>
+                        </li>
+                    </ul>
             </div>
 
         </article>
     </div>
 
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> -->
+    <!-- <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('CljscYqJznKCwRWQR');
+        })();
+    </script> -->
+
+
+
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+
+                // emailjs.sendForm('gmailMessage', 'template_sta9b2k', this)
+                //     .then(function () {
+                //         console.log('SUCCESS!');
+                //         alert('Email enviado com sucesso!');
+                //     }, function (error) {
+                //         console.log('FAILED...', error);
+                //         alert('Failed..', error);
+                //     });
+
+
+            });
+        }
+    </script>
+
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+        </script>
+
+    <script src="index.js">
+
+
+    </script>
+    <script>
+        function sendMap() {
+            let pdfBlob;
+            fetch('/Image/Mapa-1.pdf') // Diminuir pra menos de 10MB
+                .then(res => res.blob())
+                .then(blob => {
+                    // console.log(blob);
+
+                    var reader = new FileReader();
+                    reader.readAsDataURL(blob);
+                    reader.onloadend = function () {
+                        var base64data = reader.result;
+                        // console.log(base64data);
+                        pdfBlob = base64data
+                        sendEmail(pdfBlob); // LImite de 10MB
+                    }
+
+                });
+        }
+    </script>
 </body>
+
 </html>
