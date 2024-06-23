@@ -9,9 +9,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-
-
-
 <body>
 
     <header>
@@ -19,9 +16,6 @@
     </header>
 
     <div class="conteudo">
-
-
-
 
         <article>
             <div id="principal">
@@ -48,12 +42,7 @@
 
                         </div>
 
-
-
                     </div>
-
-
-
 
                     <div id="cadastro">
                         <!-- #Colocar o ul lu para listar as intruções-->
@@ -102,14 +91,6 @@
         </article>
     </div>
 
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> -->
-    <!-- <script type="text/javascript">
-        (function () {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init('CljscYqJznKCwRWQR');
-        })();
-    </script> -->
-
 
 
     <script type="text/javascript">
@@ -149,10 +130,6 @@
 
     </script>
     <script>
-        function alert1() {
-            alert('Email enviado com sucesso!');
-        }
-
         function sendMap() {
             let pdfBlob;
             fetch('/Image/Mapa2.pdf') // Diminuir pra menos de 10MB
@@ -166,9 +143,10 @@
                         var base64data = reader.result;
                         // console.log(base64data);
                         pdfBlob = base64data
-                        sendEmail2(pdfBlob); // LImite de 10MB
+                        sendEmail2(pdfBlob);        function alert1() {
+            alert('Email enviado com sucesso!');
+        } // LImite de 10MB
                     }
-
                 });
         }
     </script>
